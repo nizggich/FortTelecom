@@ -109,6 +109,7 @@ docker exec -it server sudo /opt/ftelecom/client_app set ifname=tun0 time=50
           ip=172.20.10.2
           mac=38:d5:7a:e4:58:0f
           status=OK
+
 Неуспешный результат:
           status=ERR
 
