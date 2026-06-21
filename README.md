@@ -49,7 +49,6 @@ C помощью set-запроса можно переопределить се
 
 > 💡 `*`Клиент и сервер пишут свои собственныe логи в отдельные файлы: *server_log.txt* и *client_log.txt*, находящиеся в */var/log*
 
-
 ## 🔨Компиляция 
 ### 📋Требования
 - Компилятор gcc (или совместимый)  
@@ -99,4 +98,24 @@ docker exec -it server sudo /opt/ftelecom/client_app get
 docker exec -it server sudo /opt/ftelecom/client_app set ifname=tun0 time=50
 ````
 
+## Результат работы  
+````
+Команда: sudo ./client_app get
+Успешный результат:
+          ifname=wlp1s0
+          interval=10
+          rx_bytes=461852058
+          tx_bytes=46231358
+          ip=172.20.10.2
+          mac=38:d5:7a:e4:58:0f
+          status=OK
+Неуспешный результат:
+          status=ERR
+
+
+Команда: sudo ./client_app set ifname=wlp0s1
+Успешный результат: status=OK
+Неуспешный результат: status=ERR
+
+````
  
