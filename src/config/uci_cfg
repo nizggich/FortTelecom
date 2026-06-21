@@ -1,0 +1,3 @@
+config interface 'collector'
+  option ifname 'wlp1s0'
+  option time '10'
